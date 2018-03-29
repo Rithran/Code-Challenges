@@ -19,7 +19,7 @@ public class ConwaysGameOfLife
         };
  
         // Display the grid
-        System.out.println("Original Generation");
+        System.out.println("First Generation");
         for (int i = 0; i < X; i++)
         {
             for (int j = 0; j < Y; j++)
@@ -55,7 +55,7 @@ public class ConwaysGameOfLife
                 // its neighbors as it was counted before
                 livingNeighbors -= grid[l][m];
  
-                // Implementing the Rules of Life
+                // Implement rules of life
  
                 // Cell is lonely and dies
                 if ((grid[l][m] == 1) && (livingNeighbors < 2))
@@ -69,7 +69,7 @@ public class ConwaysGameOfLife
                 else if ((grid[l][m] == 0) && (livingNeighbors == 3))
                     future[l][m] = 1;
  
-                // Remains the same
+                // Does not change
                 else
                     future[l][m] = grid[l][m];
             }
