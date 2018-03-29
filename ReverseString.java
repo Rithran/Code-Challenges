@@ -6,6 +6,7 @@ class ReverseString {
   public static String Reverse(String str) { 
   
      String reverse = "";
+    //start at the end of the original string and add chars backwards to the new string
     for(int i = str.length() - 1; i >= 0; i--){
      reverse = reverse + str.charAt(i);
     }
@@ -32,6 +33,7 @@ class ReverseString {
   
       Scanner s = new Scanner(System.in);
       String str = s.nextLine();
+    //StringBuilder reverse... almost feels like cheating.
       StringBuilder b = new StringBuilder(str);
       String reverse = b.reverse().toString();
       System.out.print(reverse); 
